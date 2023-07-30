@@ -1,0 +1,129 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<style>
+  .movie-poster {
+      max-width: 250px;
+      max-height: 349px;
+      width: 100%;
+      height: auto;
+  }
+  .movie-name {
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-height: 1.5em; 
+        }
+        .movie-card {
+        width: 250px;
+        height: 500px;
+        
+    }
+</style>
+<style>
+  #center {
+    background-color: #0f0f0f; 
+}
+.you-may-also-like{
+  background-color: #000000;
+}
+.you-may-also-like h2{
+  padding-top: 10px;
+  padding-left: 100px;
+}
+.img-fluid {
+        border: 2px solid red;
+        max-width: 100%;
+        height: auto;
+    }
+  .center_home {
+    padding-top: 20px;
+}
+.movieposter{
+  padding-bottom: 50px;
+}
+   
+    .badge {
+        margin-right: 5px; 
+        font-size: 13px; 
+    }
+    .bg-orange {
+    background-color: orange;
+}
+.imdb-badge{
+  font-size: 15px;
+}
+</style>
+<section id="center" class="center_home">
+  <div class="container" style="padding-bottom: 20px;">
+      <div class="row">
+          <div class="col-md-3 tv_showposter">
+              <img src="{{ tv_show.poster_url }}" alt="{{ tv_show.tv_show_name }}" class="img-fluid poster-image">
+          </div>
+          <div class="col-md-8 tv_show-details">
+              <h2 class="col_red"><b>{{ tv_show.tv_show_name }}</b></h2>
+              <h4><span class="badge bg-orange text-black imdb-badge"> IMDb: {{ tv_show.imdb_rating }}</span></h4>
+              <p>{{ tv_show.description }}</p>
+              <div class="genre-box p-0 mb-3">
+                <p class="mb-0">Genres:</p>
+                {% for genre in tv_show.genres %}
+                <span class="badge bg-secondary">{{ genre }}</span>
+                {% endfor %}
+            </div>
+            
+              <h6 class="mt-4 mb-0"><a class="button" href="#"><i class="fa fa-play-circle align-middle me-1"></i> Watch for Free</a></h6>
+          </div>
+      </div>
+  </div>
+  <div class="you-may-also-like" style="padding-bottom: 20px;">
+    <h2><b>You may also <span class="col_red">like</span></b></h2>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-md-5 g-4">
+          {% for removie in similar_tv_shows %}
+          <div class="col px-1 pb-1">
+              <div class="movie-card">
+                  <div class="trend_2im clearfix position-relative">
+                      <div class="trend_2im1 clearfix">
+                          <div class="grid">
+                              <figure class="effect-jazz mb-0">
+                                  <a href="{% url 'tv_show_details' removie.tv_show_id %}">
+                                  <img src="{{ removie.poster_url }}" alt="{{ removie.tv_show_name }}" class="movie-poster">
+                                  </a>
+                              </figure>
+                          </div>
+                      </div>
+                      <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
+                      </div>
+                  </div>
+                  <div class="trend_2ilast bg_grey p-3 clearfix">
+                      <h5 class="movie-name text-center mb-3"><a class="col_" href="{% url 'movie_details' removie.tv_show_id %}">{{ removie.tv_show_name }}</a></h5>
+                      <div class="text-center">
+                          <span class="col_red">
+                              {% for _ in removie.imdb_rating|floatformat %}
+                              <i class="fa fa-star"></i>
+                              {% endfor %}
+                          </span>
+                          <br>
+                          <span class="col_light">
+                              {{ removie.imdb_rating }} (IMDb)
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+</div>
+</div>
+</section>
+<style>
+  .mb-0.footer-menu li {
+    display: inline-block;
+  }
+
+  .mb-0.footer-menu li:not(:last-child):after {
+    content: " - ";
+  }
+</style>
+{% endblock %}

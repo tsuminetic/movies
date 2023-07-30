@@ -1,0 +1,85 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<style>
+  .movie-poster {
+      max-width: 250px;
+      max-height: 349px;
+      width: 100%;
+      height: auto;
+  }
+  .movie-name {
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-height: 1.5em; 
+        }
+        .movie-card {
+        width: 250px;
+        height: 500px;
+        
+    }
+</style>
+<section id="center" class="center_home">
+  <div class="container">
+    {% if results %}
+        <div class="row row-cols-2 row-cols-md-5 g-4">
+            {% for item in results %}
+                <div class="col px-1 pb-1">
+                    <div class="movie-card">
+                        <div class="trend_2im clearfix position-relative">
+                            <div class="trend_2im1 clearfix">
+                                <div class="grid">
+                                    <figure class="effect-jazz mb-0">
+                                      <a href="{% if item.movie_id %}{% url 'movie_details' item.movie_id %}{% elif item.tv_show_id %}{% url 'tv_show_details' item.tv_show_id %}{% endif %}">
+                                        <img src="{{ item.poster_url }}" alt="{{ item.movie_name }}" class="movie-poster">
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
+                                <!--<span class="fs-1"><a class="col_red" href="#"><i class="fa fa-youtube-play"></i></a></span>-->
+                            </div>
+                        </div>
+                        <div class="trend_2ilast bg_grey p-3 clearfix">
+                            <h5 class="movie-name text-center mb-3">
+                                {% if item.movie_id %}
+                                    <a class="col_" href="{% url 'movie_details' item.movie_id %}">{{ item.movie_name }}</a>
+                                {% elif item.tv_show_id %}
+                                    <a class="col_" href="{% url 'tv_show_details' item.tv_show_id %}">{{ item.tv_show_name }}</a>
+                                {% else %}
+                                    {{ item.movie_name }} / {{ item.tv_show_name }}
+                                {% endif %}
+                            </h5>
+                            <div class="text-center">
+                                <span class="col_red">
+                                    {% for _ in item.imdb_rating|floatformat %}
+                                        <i class="fa fa-star"></i>
+                                    {% endfor %}
+                                </span>
+                                <br>
+                                <span class="col_light">
+                                    {{ item.imdb_rating }} (IMDb)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">No results found.</p>
+    {% endif %}
+</div>
+</section>
+<style>
+  .mb-0.footer-menu li {
+    display: inline-block;
+  }
+
+  .mb-0.footer-menu li:not(:last-child):after {
+    content: " - ";
+  }
+</style>
+{% endblock %}

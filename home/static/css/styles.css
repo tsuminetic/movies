@@ -1,0 +1,7 @@
+.footer-menu {
+    text-align: right;
+  }
+.navbar-light {
+    background-color: #010101; /* Replace #333 with your desired dark color */
+    padding: 10px; /* Add some padding to improve visibility */
+}

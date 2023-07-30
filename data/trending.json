@@ -1,0 +1,146 @@
+[
+    {
+        "movie_id": "79936",
+        "movie_name": "Avatar: The Way of Water",
+        "poster_url": "/trending/1.png",
+        "description": "Several years after the Na'vi repelled the RDA invasion, Jake Sully and his family are living on Pandora. Things seem peaceful, but the RDA has other plans, invading and capturing Pandora. Sully forms a guerrilla group to try to expel the invaders.",
+        "genres": "Action, Adventure, Fantasy, Sci-Fi",
+        "cast": "",
+        "imdb_rating": 7.6
+    },
+    {
+        "movie_id": "693",
+        "movie_name": "Barbie",
+        "poster_url": "/trending/2.png",
+        "description": "Barbie suffers a crisis that leads her to question her world and her existence.",
+        "genres": "Adventure, Comedy, Fantasy, Romance",
+        "cast": "",
+        "imdb_rating": 7.6
+    },
+    {
+        "movie_id": "12459",
+        "movie_name": "Guardians of the Galaxy Volume 3",
+        "poster_url": "/trending/3.png",
+        "description": "In Marvel Studios \"Guardians of the Galaxy Vol. 3\", our beloved band of misfits are looking a bit different these days. Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+        "genres": "Action, Adventure, Comedy, Sci-Fi",
+        "cast": "",
+        "imdb_rating": 8.1
+    },
+    {
+        "movie_id": "7096",
+        "movie_name": "Jurassic World Dominion",
+        "poster_url": "/trending/4.png",
+        "description": "After surviving the destruction of Isla Nubla, Owen Grady and Claire Dearing took in young Maisie Lockwood. They've been living under the radar to protect Maisie, but she feels like a prisoner. When Maisie goes missing, Owen and Claire set out to find her, and eventually confront Lewis Dodgson, owner of Biosyn. Paleobotanist Ellie Sattler, Paleontologist Alan Grant, and Chaotician Ian Malcolm set out to expose Dodgson's schemes.",
+        "genres": "Action, Adventure, Sci-Fi, Thriller",
+        "cast": "",
+        "imdb_rating": 5.6
+    },
+    {
+        "movie_id": "68135",
+        "movie_name": "Mission Impossible Dead Reckoning",
+        "poster_url": "/trending/5.png",
+        "description": "Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands. With control of the future and the fate of the world at stake, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan is forced to consider that nothing can matter more than the mission -- not even the lives of those he cares about most.",
+        "genres": "Action, Adventure, Thriller",
+        "cast": "",
+        "imdb_rating": 8.0
+    },
+    {
+        "movie_id": "97708",
+        "movie_name": "No Hard Feelings",
+        "poster_url": "/trending/6.png",
+        "description": "Lawrence's character portrays the \"ne'er-do-well\" who answers a Craigslist ad that was placed to hire a date for an introverted and socially awkward teen boy, by his mother and father, who also just so happens to be preparing for college soon.",
+        "genres": "Comedy, Romance",
+        "cast": "",
+        "imdb_rating": 6.7
+    },
+    {
+        "movie_id": "98446",
+        "movie_name": "Oppenheimer",
+        "poster_url": "/trending/7.png",
+        "description": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+        "genres": "Biography, Drama, History",
+        "cast": "",
+        "imdb_rating": 8.8
+    },
+    {
+        "movie_id": "66674",
+        "movie_name": "Spider-Man Across the Spider-Verse",
+        "poster_url": "/trending/8.png",
+        "description": "Miles Morales returns for the next chapter of the Oscar®-winning Spider-Verse saga, an epic adventure that will transport Brooklyn's full-time, friendly neighborhood Spider-Man across the Multiverse to join forces with Gwen Stacy and a new team of Spider-People to face off with a villain more powerful than anything they have ever encountered.",
+        "genres": "Animation, Action, Adventure, Family, Fantasy, Sci-Fi",
+        "cast": "",
+        "imdb_rating": 8.9
+    },
+    {
+        "movie_id": "97162",
+        "movie_name": "The Boogeyman",
+        "poster_url": "/trending/9.png",
+        "description": "A psychiatrist, where a man named Lester Billings talks to the doctor about the \"murders\" of his three young children, describing the events of the past several years. His first two children died mysteriously of apparently unrelated causes (diagnosed as crib death and convulsions, respectively) when left alone in their bedrooms. The only commonalities were that the children cried \"Boogeyman!\" before being left alone, and the closet door ajar after discovering their corpses, even though Billings is certain the door was shut.",
+        "genres": "Horror, Mystery, Thriller",
+        "cast": "",
+        "imdb_rating": 6.1
+    },
+    {
+        "movie_id": "97519",
+        "movie_name": "The Flash",
+        "poster_url": "/trending/10.png",
+        "description": "Barry Allen is struck by a bolt of lightning and thus, an extraordinary power is born inside him: The Speed Force. When he uses this power to run back in time and save his mother, he creates a world without heroes and General Zod has returned. To defeat him, his only hope rests in the hands of a retired Batman, another Barry, and an imprisoned kryptonian.",
+        "genres": "Action, Adventure, Fantasy, Sci-Fi",
+        "cast": "",
+        "imdb_rating": 7.0
+    },
+    {
+        "movie_id": "19543",
+        "movie_name": "The Wolf of Wall Street",
+        "poster_url": "/trending/11.png",
+        "description": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+        "genres": "Biography, Comedy, Crime, Drama",
+        "cast": "",
+        "imdb_rating": 8.2
+    },
+    {
+        "movie_id": "91042",
+        "movie_name": "Transformers: Rise of the Beast",
+        "poster_url": "/trending/12.png",
+        "description": "Returning to the action and spectacle that has captured moviegoers around the world, Transformers: Rise of the Beasts will take audiences on a '90s globetrotting adventure with the Autobots and introduce a whole new faction of Transformers - the Maximals - to join them as allies in the existing battle for earth. Directed by Steven Caple Jr. and starring Anthony Ramos and Dominique Fishback.",
+        "genres": "Action, Adventure, Sci-Fi",
+        "cast": "",
+        "imdb_rating": 6.2
+    },
+    {
+        "movie_id": "tt13x",
+        "movie_name": "We Can't All Die First",
+        "poster_url": "/trending/13.png",
+        "description": "A standoff between two rival gangsters and their respective posses leads to surprising and hilarious consequences. Part noir, part comedy, and part romance - the only thing faster than a bullet is the dialogue in this stylish, snappy short.",
+        "genres": "Short, Comedy, Crime, Romance",
+        "cast": "",
+        "imdb_rating": 7.9
+    },
+    {
+        "movie_id": "90163",
+        "movie_name": "John Wick Chapter 4",
+        "poster_url": "/trending/14.png",
+        "description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+        "genres": "Action, Crime, Thriller",
+        "cast": "",
+        "imdb_rating": 7.8
+    },
+    {
+        "movie_id": "8846",
+        "movie_name": "Fast X",
+        "poster_url": "/trending/15.png",
+        "description": "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.",
+        "genres": "Action, Crime, Adventure",
+        "cast": "",
+        "imdb_rating": 5.9
+    },
+    {
+        "movie_id": "tt16x",
+        "movie_name": "One Piece",
+        "poster_url": "/trending/16.jpg",
+        "description": "In a seafaring world, a young pirate captain sets out with his crew to attain the title of Pirate King, and to discover the mythical treasure known as 'One Piece.'",
+        "genres": "Action, Comedy, Adventure",
+        "cast": "",
+        "imdb_rating": 0
+    }
+]

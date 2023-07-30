@@ -1,0 +1,107 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+    <style>
+        .tv_show-name {
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-height: 1.5em;
+        }
+        .tv_show-card {
+        width: 250px;
+        height: 470px;
+        
+    }
+    .button-disabled {
+    color: #777; 
+    pointer-events: none; 
+    cursor: default; 
+    }
+    </style>
+    <section id="center" class="center_home">
+        <div class="pagination mt-0 d-flex justify-content-end" style="margin-right: 110px;">
+            {% if page_obj.has_previous %}
+                <h6 class="mt-0 mb-0 me-3"><a class="button" href="?page={{ page_obj.previous_page_number }}"><i class="align-middle me-1"></i> Previous page</a></h6>
+            {% else %}
+                <h6 class="mt-0 mb-0 me-3"><span class="button button-disabled"><i class="align-middle me-1"></i> Previous page</span></h6>
+            {% endif %}
+
+            {% if page_obj.has_next %}
+                <h6 class="mt-0 mb-0"><a class="button button-enabled mr-3" href="?page={{ page_obj.next_page_number }}"><i class="align-middle me-1"></i> Next page</a></h6>
+            {% else %}
+                <h6 class="mt-0 mb-0"><span class="button button-disabled"><i class="align-middle me-1"></i> Next page</span></h6>
+            {% endif %}
+        </div>
+        <div class="container">
+            <div class="row row-cols-2 row-cols-md-5 g-4">
+                {% for tv_show in page_obj %}
+                <div class="col px-1 pb-">
+                    <div class="tv_show-card">
+                        <div class="trend_2im clearfix position-relative">
+                            <div class="trend_2im1 clearfix">
+                                <div class="grid">
+                                    <figure class="effect-jazz mb-0">
+                                        <a href="{% url 'tv_show_details' tv_show.tv_show_id %}">
+                                        <img src="{{ tv_show.poster_url }}" alt="{{ tv_show.tv_show_name }}" class="tv_show-poster">
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
+                            </div>
+                        </div>
+                        <div class="trend_2ilast bg_grey p-3 clearfix">
+                            <h5 class="tv_show-name text-center mb-3"><a class="col_" href="{% url 'tv_show_details' tv_show.tv_show_id %}">{{ tv_show.tv_show_name }}</a></h5>
+                            <div class="text-center">
+                                <span class="col_red">
+                                    {% for _ in tv_show.imdb_rating|floatformat %}
+                                    <i class="fa fa-star"></i>
+                                    {% endfor %}
+                                </span>
+                                <br>
+                                <span class="col_light">
+                                    {{ tv_show.imdb_rating }} (IMDb)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    
+            <div class="pagination mt-0 d-flex justify-content-center">
+                {% if page_obj.has_previous %}
+                    <h6 class="mt-0 mb-0 me-3"><a class="button" href="?page={{ page_obj.previous_page_number }}"><i class="align-middle me-1"></i> Previous page</a></h6>
+                {% else %}
+                    <h6 class="mt-0 mb-0 me-3"><span class="button button-disabled"><i class="align-middle me-1"></i> Previous page</span></h6>
+                {% endif %}
+    
+                {% if page_obj.has_next %}
+                    <h6 class="mt-0 mb-0"><a class="button button-enabled mr-3" href="?page={{ page_obj.next_page_number }}"><i class="align-middle me-1"></i> Next page</a></h6>
+                {% else %}
+                    <h6 class="mt-0 mb-0"><span class="button button-disabled"><i class="align-middle me-1"></i> Next page</span></h6>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .tv_show-poster {
+            max-width: 250px;
+            max-height: 320px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+      <style>
+        .mb-0.footer-menu li {
+          display: inline-block;
+        }
+    
+        .mb-0.footer-menu li:not(:last-child):after {
+          content: " - ";
+        }
+      </style>
+{% endblock %}
